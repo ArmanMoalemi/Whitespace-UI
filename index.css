@@ -302,7 +302,7 @@ body {
     transform:scaleX(0.85);
 }
 
-.asked-question-container {
+.asked-question-container, .blog-container{
     padding-top:80px;
     display:flex;
     flex-direction: column;
@@ -314,6 +314,8 @@ body {
     color:rgba(52, 64, 81, 1);
     margin-top:12px;
     text-align: center;
+    width:44%;
+    line-height: 28px;
 }
 .question-container {
     display:flex;
@@ -377,6 +379,92 @@ body {
 }
 .email-img {
     padding-right:6px;
+}
+
+
+.article-container {
+    display:flex;
+    gap:32px;
+    margin-top:64px;
+}
+.article-1 {
+    flex:1;
+    display:flex;
+    flex-direction: column;
+}
+.article-img {
+    width:100%;
+}
+.asection-2, .asection-3, .asection-4, .asection-5 {
+    width:94%;
+    margin-left:3%;
+    margin-top:0;
+}
+.asection-2 {
+    display:flex;
+    gap:8px;
+    margin-top:24px;
+}
+.aname {
+    font-size:14px;
+    color:rgba(52, 64, 81, 1);
+}
+.adate {
+    font-size:12px;
+    color:rgba(99, 112, 131, 1);
+}
+.header-6 {
+    font-size:24px;
+    font-weight:600;
+    color:rgba(20, 28, 36, 1);
+    margin-top:12px;
+}
+.description-5 {
+    font-size:16px;
+    color:rgba(52, 64, 81, 1);
+    margin-top:10px;
+}
+.asection-5 {
+    display:flex;
+    gap:8px;
+    margin-top:24px;
+    margin-bottom:24px;
+}
+.article-label {
+    padding:2px 8px;
+    font-size:12px;
+    font-weight: 600;
+    border-radius:150px;
+}
+.article-label.ui {
+    background:rgba(229, 239, 255, 1);
+    color:rgba(0, 78, 204, 1);
+}
+.article-label.studio {
+    background:rgba(229, 244, 255, 1);
+    color:rgba(0, 119, 204, 1);
+}
+.article-label.web {
+    background:rgba(229, 249, 255, 1);
+    color:rgba(0, 153, 204, 1);
+}
+.article-label.count {
+    background:rgba(242, 244, 247, 1);
+    color:rgba(52, 64, 81, 1);
+}
+.btn.load-more {
+    margin-top:32px;
+    margin-bottom:40px;
+    padding:12px 24px;
+    background:rgba(26, 117, 255, 1);
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+
+    transition:background-color 0.2s ease-in-out;
+}
+.btn.load-more:is(:hover, :focus) {
+    background:rgb(15, 106, 242);
 }
 
 
