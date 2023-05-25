@@ -45,6 +45,9 @@ body {
     cursor:pointer;
     padding:0;
 }
+img.menu {
+    vertical-align: middle;
+}
 .btn.nav-btn {
     font-family:inter;
     font-size:16px;
@@ -55,7 +58,7 @@ body {
 .btn.nav-btn:not(:last-child) {
     border-bottom:1px solid rgb(242, 242, 242);
 }
-.btn.nav-btn:not(:last-child)::before, .btn.welcome-btn.streamline-btn:last-child::before {
+.btn.nav-btn:not(:nth-child(6),:nth-child(7))::before, .btn.welcome-btn.streamline-btn:last-child::before {
     content:'';
     position:absolute;
     top:0;
@@ -86,6 +89,17 @@ body {
     background:rgb(15, 106, 242);
     transform:translate(4px);
 }
+.btn.nav-btn.menu {
+    border:1px solid rgba(206, 210, 218, 1);
+    border-radius:8px;
+    padding: 0px 5px;
+    margin-left:12px;
+
+    transition:border 0.2s ease-in-out;
+}
+.btn.nav-btn.menu:is(:focus, :hover) {
+    border:1px solid rgb(15, 106, 242);
+}
 
 
 .content {
@@ -108,6 +122,9 @@ body {
 }
 .model-img {
     border-radius:20px;
+}
+.model-img.res-1, .model-img.res-2 {
+    display:none;
 }
 .card-img {
     position:absolute;
@@ -213,6 +230,8 @@ body {
 }
 .fcsection-1 {
     flex:3;
+    display:flex;
+    flex-direction: column;
 }
 .fcsection-2 {
     flex:2;
@@ -224,13 +243,12 @@ body {
     row-gap: 30px;
 }
 .gallery-1, .gallery-2 {
-    flex:60%;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
 }
 .gallery-img {
     width:100%;
-}
-.gallery-img:last-child {
-    margin-top:24px;
 }
 .img-background {
     display:inline-block;
@@ -394,6 +412,9 @@ body {
 }
 .article-img {
     width:100%;
+}
+.article-img.res-1, .article-img.res-2 {
+    display:none;
 }
 .asection-2, .asection-3, .asection-4, .asection-5 {
     width:94%;
@@ -594,7 +615,6 @@ form {
 }
 .social-img {
     vertical-align: middle;
-    margin-right:8px;
 }
 .link-title {
     font-size:18px;
@@ -657,5 +677,129 @@ form {
     }
     .footer-link-flex {
         gap:30px;
+    }
+}
+@media screen and (max-width:1050px) {
+    .nav {
+        padding-bottom:10px;
+        border-bottom:1px solid rgba(228, 231, 236, 1);
+        width:100%;
+    }
+    .comp-name {
+        margin-left:2.5%;
+    }
+    .nav-links {
+        margin-right:2.5%;
+    }
+    .content {
+        width:95%;
+    }
+    .card-img, .model-img {
+        display:none;
+    }
+    .model-img.res-1 {
+        display: block;
+    }
+    .welcome-container {
+        flex-direction:column;
+        gap:64px;
+    }
+    .btn.nav-btn:not(:nth-child(6),:nth-child(7)) {
+        display:none;
+    }
+    .header-2, .text-1, .description-3 {
+        width:100%;
+    }
+    .text-1 {
+        margin-top:16px;
+    }
+    .wsection-1-2 {
+        margin-top:48px;
+    }
+    .user-rating {
+        margin-top:8px;
+    }
+
+    .flex-container-1 {
+        flex-direction:column;
+        margin-top:72px;
+        gap:30px;
+    }
+    .featurecard-details {
+        margin:24px;
+    }
+    .fcsection-1, .fcsection-2 {
+        flex:content;
+    }
+    .fcsection-1 {
+        width:100%;
+    }
+    .sfeature-container {
+        gap:32px;
+    }
+    .question-container {
+        width:100%;
+    }
+    .blog-container {
+        padding-bottom:28px;
+    }
+    .article-img {
+        display:none;
+    }
+    .article-img.res-1 {
+        display:block;
+    }
+    .article-container {
+        flex-direction:column;
+        width:100%;
+        margin-top:48px;
+    }
+    .subscribe-container {
+        margin-top:0;
+    }
+    .header-7 {
+        width:95%;
+    }
+    .description-6 {
+        width:75%;
+    }
+    .email-input {
+        width:50%;
+    }
+    .client-container {
+        margin-top:64px;
+        margin-bottom:64px;
+    }
+    .subscribe-container {
+        background:url('imgs/shape-1050px.png') no-repeat right bottom rgba(240, 246, 255, 1);
+    }
+    .header-8 {
+        margin-bottom:72px;
+    }
+    .logo-container {
+        display:flex;
+        gap:120px;
+    }
+    .client-section {
+        flex-direction:column;
+    }
+    .client-section:last-child {
+        margin:0;
+    }
+    .footer-container {
+        flex-direction:column;
+        gap:32px;
+    }
+    .footer-link-flex {
+        justify-content:flex-start;
+        gap:11%;
+    }
+    .link-container:last-child {
+        flex:40%;
+    }
+}
+@media screen and (max-width:810px) {
+    .footer-link-flex {
+        gap:40px;
     }
 }
