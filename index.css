@@ -94,6 +94,7 @@ img.menu {
     border-radius:8px;
     padding: 0px 5px;
     margin-left:12px;
+    display:none;
 
     transition:border 0.2s ease-in-out;
 }
@@ -690,6 +691,9 @@ form {
     }
     .nav-links {
         margin-right:2.5%;
+    }
+    .btn.nav-btn.menu  {
+        display: block;
     }
     .content {
         width:95%;
